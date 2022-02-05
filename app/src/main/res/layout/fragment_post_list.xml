@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="postListVM"
+            type="com.jc.app.blog.presentation.ui.features.blog.list.PostListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:elevation="2dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="@dimen/spacing_large"
+            android:text="@string/tv_posts"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_larger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:elevation="3dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_refresh_24" />
+
+        <com.jc.app.blog.presentation.custom.ToggleCustomView
+            android:id="@+id/ttbFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:ttb_button_option_one_text="All"
+            app:ttb_button_option_two_text="Favorites"
+            app:ttb_button_selected="one" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPosts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/spacing_larger"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ttbFilters"
+            app:submitPostList="@{postListVM.postModelList}"
+            tools:listitem="@layout/item_post" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLoadPosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/tv_load_posts"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small"
+            android:padding="@dimen/spacing_large"
+            android:backgroundTint="@color/teal_200"
+            app:gone_unless="@{postListVM.allPosts.empty}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            app:gone_unless="@{postListVM.spinner}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:contentDescription="@string/tv_remove_all_posts"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:backgroundTint="@color/red"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

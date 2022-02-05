@@ -1,0 +1,12 @@
+<resources>
+<!-- circle progress bar    -->
+    <declare-styleable name="ToggleThreeButtonsCustomView">
+        <attr name="ttb_button_option_one_text" format="string" />
+        <attr name="ttb_button_option_two_text" format="string" />
+        <attr name="ttb_button_selected">
+            <flag name="one" value="1" />
+            <flag name="two" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

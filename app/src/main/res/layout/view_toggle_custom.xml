@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_marginBottom="@dimen/spacing_smaller"
+    app:layout_constraintBottom_toBottomOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="@dimen/spacing_large"
+        app:cornerRadius="0dp"
+        android:checkable="true"
+        android:letterSpacing="0"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/btn_checkable_filter"
+        app:strokeColor="@color/white"
+        app:strokeWidth="0.5dp"
+        app:elevation="0dp"
+        android:fontFamily="@font/gotham_book"
+        android:layout_marginVertical="0dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOptionTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="@dimen/spacing_large"
+        app:cornerRadius="0dp"
+        android:checkable="true"
+        android:letterSpacing="0"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/btn_checkable_filter"
+        android:fontFamily="@font/gotham_book"
+        app:strokeColor="@color/white"
+        app:strokeWidth="0.5dp"
+        app:elevation="0dp"
+        android:layout_marginVertical="0dp"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

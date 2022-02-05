@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="commentModel"
+            type="com.jc.app.blog.domain.model.CommentModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:paddingVertical="@dimen/spacing_tiny"
+        android:background="@drawable/bg_corners_bottom_gray"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/spacing_small"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/spacing_smaller"
+            android:paddingVertical="@dimen/spacing_smaller"
+            android:text="@{commentModel.body}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_smaller"
+            tools:text="Soaring - Basic" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

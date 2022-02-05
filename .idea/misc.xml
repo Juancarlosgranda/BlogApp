@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.415625" />
+        <entry key="app/src/main/res/drawable-v24/bg_corners_round_16dp.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable-v24/bg_corners_round_8dp.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable-v24/ic_all_no_image_available_80.xml" value="0.2615" />
+        <entry key="app/src/main/res/drawable/bg_corners_bottom_gray.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/bg_corners_bottom_gray4_8dp.xml" value="0.38" />
+        <entry key="app/src/main/res/drawable/bg_corners_round_blue4_8dp.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/bg_corners_round_gray4_8dp.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2705" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.273" />
+        <entry key="app/src/main/res/drawable/ic_lens.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_local_movies.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.3921875" />
+        <entry key="app/src/main/res/layout/activity_acronym_list.xml" value="0.32271468144044324" />
+        <entry key="app/src/main/res/layout/activity_dog_list.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/activity_movie_list.xml" value="0.3619791666666667" />
+        <entry key="app/src/main/res/layout/activity_music.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_lyrics.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_post.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_post_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/fragment_search_song.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_suggest_song.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_acronym.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_acronym_longForm.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/item_acronym_long_form.xml" value="0.4301181102362205" />
+        <entry key="app/src/main/res/layout/item_acronym_variant.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/item_comment.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/item_dogs.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_movie.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/item_song.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/item_suggest_song.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/view_toggle_custom.xml" value="0.3890625" />
+        <entry key="app/src/main/res/layout/view_toggle_three_buttons.xml" value="0.37604166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/test/resources/postList.json" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

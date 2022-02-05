@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="postVM"
+            type="com.jc.app.blog.presentation.ui.features.blog.post.PostViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:elevation="2dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="@dimen/spacing_large"
+            android:text="@string/tv_post"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_larger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:elevation="3dp"
+            app:isFavorite="@{postVM.isFavorite}"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescriptionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_smaller"
+            android:fontFamily="@font/gotham_bold"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:text="@string/tv_description"
+            android:textSize="@dimen/font_larger"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_smaller"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:text="@{postVM.postModel.body}"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel"
+            tools:text="test" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_smaller"
+            android:fontFamily="@font/gotham_black"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:text="@string/tv_user_info"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_smaller"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            app:setSecondText="@{postVM.userInfo.name}"
+            app:setFirstText="@{@string/tv_name}"
+            app:layout_constraintTop_toBottomOf="@id/tvUserTitle"
+            tools:text="Name:JC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            app:setSecondText="@{postVM.userInfo.email}"
+            app:setFirstText="@{@string/tv_email}"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName"
+            tools:text="@string/tv_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            app:setSecondText="@{postVM.userInfo.phone}"
+            app:setFirstText="@{@string/tv_phone}"
+            app:layout_constraintTop_toBottomOf="@id/tvEmail"
+            tools:text="@string/tv_phone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            app:setSecondText="@{postVM.userInfo.website}"
+            app:setFirstText="@{@string/tv_website}"
+            app:layout_constraintTop_toBottomOf="@id/tvPhone"
+            tools:text="@string/tv_website" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCommentsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_smaller"
+            android:background="@color/colorGray"
+            android:fontFamily="@font/gotham_book"
+            android:paddingHorizontal="@dimen/spacing_large"
+            android:paddingVertical="@dimen/spacing_tiny"
+            android:text="@string/tv_comments"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvWebsite" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComments"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCommentsTitle"
+            app:submitCommentList="@{postVM.commentList}"
+            tools:listitem="@layout/item_comment" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gone_unless="@{postVM.spinner}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:contentDescription="@string/tv_remove_all_posts"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:backgroundTint="@color/red"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

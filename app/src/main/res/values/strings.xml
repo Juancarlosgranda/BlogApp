@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Blog</string>
+    <string name="error_failure_none">Something unexpected happened. Contact support.</string>
+    <string name="error_failure_network_connection_lost_suddenly">The internet connection was suddenly lost.</string>
+    <string name="error_failure_no_network_detected">There is no Internet connection. Try again later.</string>
+    <string name="error_failure_ssl">SSL error.</string>
+    <string name="error_no_result_found">No results found.</string>
+    <string name="error_failure_time_out">The server timed out.</string>
+    <string name="error_general">Please contact support.</string>
+    <string name="error_failure_uncaught">An unexpected error occurred. Please try again or contact support.</string>
+    <string name="tv_posts">Posts</string>
+    <string name="tv_post">Post</string>
+    <string name="tv_description">Description</string>
+    <string name="tv_user_info">User Info</string>
+    <string name="tv_name">Name:</string>
+    <string name="tv_email">Email:</string>
+    <string name="tv_phone">Phone:</string>
+    <string name="tv_website">Website:</string>
+    <string name="tv_comments">Comments</string>
+    <string name="tv_remove_all_posts">Remove all posts</string>
+    <string name="tv_load_posts">LOAD POSTS</string>
+</resources>
